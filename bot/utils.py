@@ -10,7 +10,7 @@ BUCKET = 25
 CLIP_FRAMES = 6571
 CLIP_LENGTH = 219.0666
 # Some magical numbers, but let it be (taken from original bot)
-FRAME_LENGTH = 1 / ((floor(CLIP_FRAMES / 4) + 1) / CLIP_LENGTH)*18
+FRAME_LENGTH = 1 / ((floor(CLIP_FRAMES / 4) + 1) / CLIP_LENGTH)*4
 ASCII_CHARS = ('⠀', '⠄', '⠆', '⠖', '⠶', '⡶', '⣩', '⣪', '⣫', '⣾', '⣿')
 frames_path = Path(__file__).parent / "frames_path"
 frames_path.mkdir(exist_ok=True)
@@ -38,6 +38,9 @@ def convert_video_to_frames(video_path: Union[AnyStr, Path]) -> None:
             break
 
         frame_n += 1
+
+        if frame_n % 100 == 0:
+            print(f"{frame_n//100}/65 parts of the video rendered")
 
 
 def process_image(image: Image) -> AnyStr:

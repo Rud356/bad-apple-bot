@@ -1,5 +1,5 @@
 Pillow~=8.1.0
 discord.py~=1.6.0
 opencv-python~=4.5.1.48
-ConfigFramework~=1.3.3
+ConfigFramework~=2.0.8
 numpy==1.16.4
