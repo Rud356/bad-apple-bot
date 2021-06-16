@@ -36,7 +36,7 @@ async def on_ready():
 
     activity = discord.Activity(
         name=f"My prefix is {bad_apple_bot_config.prefix.value}",
-        type=discord.ActivityType.custom
+        type=discord.ActivityType.watching
     )
     await bot.change_presence(activity=activity)
 
